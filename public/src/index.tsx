@@ -1,20 +1,21 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import App from './App';
 import { ConnectedRouter } from 'react-router-redux';
-import { createBrowserHistory } from 'history';
-import { configureStore } from 'app/store';
-import { App } from './app';
+import { Provider } from 'react-redux';
+import { configure, history } from './config/configure-store';
+import registerServiceWorker from './registerServiceWorker';
+import './index.css';
 
-// prepare store
-const history = createBrowserHistory();
-const store = configureStore(history);
+const store = configure();
 
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <App />
-    </ConnectedRouter>
+      <ConnectedRouter history={history}>
+          <App />
+      </ConnectedRouter>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('aurita-app')
 );
+
+registerServiceWorker();
