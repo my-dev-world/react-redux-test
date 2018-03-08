@@ -47,10 +47,16 @@ var config = {
         test: /\.scss$/,
         use: [
           {
-            loader: "raw-loader"
+            loader: require.resolve('style-loader'),
           },
           {
-            loader: "sass-loader",
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: require.resolve("sass-loader"),
             options: {
               includePaths: [
                 "./node_modules/bootstrap-sass/assets/stylesheets",
