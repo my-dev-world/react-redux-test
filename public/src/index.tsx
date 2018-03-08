@@ -10,12 +10,12 @@ import './index.css';
 const store = configure();
 
 ReactDOM.render(
-  <Provider store={store}>
-      <ConnectedRouter history={history}>
-          <App />
-      </ConnectedRouter>
-  </Provider>,
-  document.getElementById('aurita-app')
+    <Provider store={store}>
+        <ConnectedRouter history={history}>
+            <App />
+        </ConnectedRouter>
+    </Provider>,
+    document.getElementById('aurita-app')
 );
 
 registerServiceWorker();
