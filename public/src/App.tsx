@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 // Containers
-import Home from './Containers/Home/Home';
+import Home from './components/Home/Home';
 
 import './App.css';
 

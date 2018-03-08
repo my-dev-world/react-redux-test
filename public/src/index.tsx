@@ -5,7 +5,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import { configure, history } from './config/configure-store';
 import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import './index.scss';
 
 const store = configure();
 
