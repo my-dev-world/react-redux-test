@@ -1,0 +1,24 @@
+@(title: String)(headerContent: Html)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>@title</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="@routes.Assets.versioned("images/favicon.png")"
+    >
+  </head>
+  <body>
+    @content
+    <div id="aurita-app" />
+    <script type="text/javascript" src="/bundles/bundle.js" charset="utf-8"></script>
+  </body>
+</html>

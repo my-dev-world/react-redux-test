@@ -1,0 +1,16 @@
+.DS_Store
+logs
+target
+/conf/generated.keystore
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+/public/node_modules
+*~
+#*
+*#
+public/package-lock.json
+public/javascripts
